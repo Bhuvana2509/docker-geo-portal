@@ -9,7 +9,7 @@ This project bundles all prerequisites needed to run the geoportal server and a 
 Clone the repository to your local drive. In order to build the containers and run them, use the following commands:
 ```bash
 $ git clone https://github.com/Bhuvana2509/docker-geo-portal.git
-$ cd docker-geoportal/src
+$ cd docker-geo-portal/src
 $ docker network create geoportal
 $ docker-compose build
 $ docker-compose up
