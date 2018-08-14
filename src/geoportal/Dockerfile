@@ -22,8 +22,8 @@ ENV GPTURL=https://github.com/Bhuvana2509/geoportal_server/archive/v1.2.zip
 ADD $GPTURL /tmp/geoportal-server-cdg.zip
 
 WORKDIR $CATALINA_HOME/webapps/
-RUN unzip /tmp/geoportal.zip *.war
-RUN rm /tmp/geoportal.zip
+RUN unzip /tmp/geoportal.war
+#RUN rm /tmp/geoportal.zip
 
 COPY tomcat-users.xml $CATALINA_HOME/conf
 
