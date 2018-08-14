@@ -19,11 +19,11 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 # Install geoportal web application
 ENV GPTURL=https://github.com/Bhuvana2509/geoportal_server/archive/v1.2.zip
 
-ADD $GPTURL /tmp/geoportal-server-cdg.zip
+ADD $GPTURL /tmp/geoportal.zip
 
 WORKDIR $CATALINA_HOME/webapps/
-RUN unzip /tmp/geoportal.war
-#RUN rm /tmp/geoportal.zip
+RUN unzip /tmp/geoportal.zip *.war
+RUN rm /tmp/geoportal.zip
 
 COPY tomcat-users.xml $CATALINA_HOME/conf
 
